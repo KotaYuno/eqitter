@@ -11,9 +11,6 @@ app.config.from_object(__name__)
 #CORS回避
 CORS(app)
 
-#自動でテンプレートが読み取られるかの確認
-app.config["TEMPLATES_AUTO_RELOAD"] = True
-
 #jsonファイルをASCIIでエンコードする為のもの
 app.config['JSON_AS_ASCII'] = False
 
