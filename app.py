@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, request, render_template, redirect, session
 from flask_cors import CORS
-import spacy
 import json
 
 from json_check import search_word
