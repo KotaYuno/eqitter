@@ -53,13 +53,13 @@
                     <tbody>
                     {% for key, value in words.items()%}
                         <tr>
-                            <td>{{key}}</td>
                             {% for word in value%}
+                            <td>{{key}}</td>
                             <td>{{word.pronounce}}</td>
                             <td>{{word.mean}}</td>
                             <td>{{word.example}}</td>
+                            </tr>
                             {% endfor %}
-                        </tr>
                     {% endfor %}
                     </tbody>
                 </table>
