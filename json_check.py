@@ -1,7 +1,7 @@
 import json
 
 def search_word(word):
-    json_file = open("seword.json", 'r',encoding="utf-8_sig")
+    json_file = open("seword.json", 'r',encoding="shift_jis")
     json_load = json.load(json_file)
     try:
         return json_load[word]
@@ -9,7 +9,7 @@ def search_word(word):
         return "None"
 
 def insert_word(word,pro=None,mean=None,ex=None,cate=None):
-    json_file = open("seword.json", 'r',encoding="utf-8_sig")
+    json_file = open("seword.json", 'r',encoding="shift_jis")
     json_load = json.load(json_file)
     data = json_load[word]
     new_data = {

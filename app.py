@@ -53,7 +53,13 @@ def register():
 
     insert_word(**tmp_dict)
 
-    return render_template("index.html", message="登録が完了しました")
+    return redirect("/")
+
+@app.route("/getall", methods=["POST"])
+def dateall():
+    json_file = open("seword.json", 'r', encoding='shift_jis')
+    json_load = json.load(json_file)
+    return (json_load)
 
 if __name__ == "__main__":
     app.run()
