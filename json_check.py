@@ -4,10 +4,8 @@ def search_word(word):
     json_file = open("seword.json", 'r',encoding="utf-8_sig")
     json_load = json.load(json_file)
     try:
-        print(json_load[word])
         return json_load[word]
     except:
-        print("None")
         return "None"
 
 def insert_word(word,pro=None,mean=None,ex=None,cate=None):
