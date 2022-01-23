@@ -17,7 +17,7 @@ app.config['JSON_AS_ASCII'] = False
 
 @app.route("/")
 def index():
-    json_file = open("seword.json", 'r', encoding="utf-8_sig")
+    json_file = open("seword.json", 'r')
     json_load = json.load(json_file)
     return render_template("index.html", words=json_load)
 
