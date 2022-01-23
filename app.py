@@ -61,5 +61,10 @@ def dateall():
     json_load = json.load(json_file)
     return (json_load)
 
+@app.route("/serch/<word>", methods=["GET"])
+def serch(word):
+    words = search_word(word)
+    return render_template("serch.html", words=words, one=word)
+
 if __name__ == "__main__":
     app.run()

@@ -12,9 +12,11 @@ window.addEventListener("load", function () {
         body: JSON.stringify({ text: textvalue }),
       };
       fetch("/resive", param)
-        .then((response) => response.text())
+        .then((response) => response.json())
         .then((text_resive) => {
-          document.querySelector("#add").innerHTML = text_resive;
+          tmp = text_resive.data
+          document.querySelector("#add").innerHTML = tmp[0].mean;
+          console.log(tmp)
         });
     });
   }
