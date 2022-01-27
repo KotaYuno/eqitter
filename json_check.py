@@ -9,7 +9,7 @@ def search_word(word):
         return "None"
 
 def insert_word(word,pro=None,mean=None,ex=None,cate=None):
-    json_file = open("seword.json", 'r',encoding="shift_jis")
+    json_file = open("seword.json", 'r',encoding="utf-8")
     json_load = json.load(json_file)
     data = json_load[word]
     new_data = {
