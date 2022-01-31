@@ -17,7 +17,7 @@ app.config['JSON_AS_ASCII'] = False
 
 @app.route("/")
 def index():
-    json_file = open("seword.json", 'r', encoding='UTF-8')
+    json_file = open("./db/seword.json", 'r', encoding='UTF-8')
     json_load = json.load(json_file)
     return render_template("index.html", words=json_load)
 
@@ -57,7 +57,7 @@ def register():
 
 @app.route("/getall", methods=["POST"])
 def dateall():
-    json_file = open("seword.json", 'r', encoding='utf-8')
+    json_file = open("./db/seword.json", 'r', encoding='utf-8')
     json_load = json.load(json_file)
     return (json_load)
 
